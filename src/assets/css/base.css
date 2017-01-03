@@ -1,0 +1,16 @@
+body{
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    background: #fff;
+}
+body,ul,li{
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-weight: normal;
+}
+
+a {
+    color: #42b983;
+}
