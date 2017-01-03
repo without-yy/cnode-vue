@@ -15,7 +15,7 @@
         <div class="content">
             <!--加载动画-->
             <div v-if="isLoading" class="loading">
-                <mt-spinner :size="30" type="snake"></mt-spinner>
+                <mt-spinner :size="30" type="triple-bounce"></mt-spinner>
             </div>
 
             <div class="loadingList" id="loadingList">

@@ -10,7 +10,9 @@ body,ul,li{
 h1, h2 {
     font-weight: normal;
 }
-
+ul,li{
+    list-style: none;
+}
 a {
     color: #42b983;
 }
