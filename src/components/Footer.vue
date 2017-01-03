@@ -2,22 +2,22 @@
     <div id="footer" class="footer">
         <mt-tabbar v-model="selected">
 
-            <mt-tab-item id="1" href="#/list">
-                <img slot="icon" src="../assets/logo.png">
+            <mt-tab-item id="list" href="#/list">
+                <i slot="icon" class="icon-anchor"></i>
                 首页
             </mt-tab-item>
 
             <mt-tab-item id="2">
-                <img slot="icon" src="../assets/logo.png">
+                <i slot="icon" class="icon-mail-reply-all"></i>
                 发表
             </mt-tab-item>
             <mt-tab-item id="3">
-                <img slot="icon" src="../assets/logo.png">
+                <i slot="icon" class="icon-comments"></i>
                 消息
             </mt-tab-item>
 
-            <mt-tab-item id="我的" href="#/user">
-                <img slot="icon" src="../assets/logo.png">
+            <mt-tab-item id="user" href="#/user">
+                <i slot="icon" class="icon-user"></i>
                 我的
             </mt-tab-item>
 
@@ -32,6 +32,9 @@
             }
         },
         watch: {
+        },
+        mounted(){
+            this.selected = this.$route.path.substring(1);
         }
     }
 </script>

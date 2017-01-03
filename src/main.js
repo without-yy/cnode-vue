@@ -4,7 +4,8 @@ import App from './App.vue'
 import Mint from 'mint-ui'
 import routerConfig from './vueRouter.config'
 import 'mint-ui/lib/style.css';
-import './assets/css/base.css'
+import './assets/css/base.css';
+import './assets/css/font-awesome.css'
 
 Vue.use(Mint);
 Vue.use(VueRouter);

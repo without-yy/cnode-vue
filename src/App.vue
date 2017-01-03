@@ -14,8 +14,7 @@
     export default {
         name: 'app',
         data () {
-            return {
-            }
+            return {}
         },
         components: {
             FooterBar,
@@ -23,3 +22,5 @@
         }
     }
 </script>
+<style>
+</style>

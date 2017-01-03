@@ -18,8 +18,8 @@
 
             <!--回复信息-->
 
-            <div class="replyBox">
-                <p>{{content.reply_count}}条回复</p>
+            <div class="replyBox" v-if="content.reply_count>0">
+                <p class="reply-count">{{content.reply_count}}条回复</p>
                 <ul class="replyList">
                     <li v-for="(item,key) in content.replies">
                         <p class="replyItem">
@@ -108,20 +108,24 @@
         margin: 0 auto;
     }
     .contentBox{
+        padding-top: 40px;
         padding-bottom: 55px;
     }
     .markdownBox{
         padding: 0 10px;
     }
     .mint-header{
-        background: #ccc;
+        background: #369;
+        position: fixed;
+        width: 100%;
+        top: 0;
     }
     .replyBox{
         background: #f6f6f6;
     }
     .replyList li{
         padding: 5px 10px;
-        border-top: 1px solid #f0f0f0;
+        border-top: 1px solid #e0e0e0;
     }
     .replyItem img{
         width: 30px;
@@ -132,5 +136,9 @@
         vertical-align: middle;
         margin-top: 3px;
         font-size: 13px;
+    }
+    .reply-count{
+        padding-top: 20px;
+        padding-left: 10px;
     }
 </style>
