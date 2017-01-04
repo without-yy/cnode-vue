@@ -18,7 +18,7 @@
                 <mt-spinner :size="30" type="triple-bounce"></mt-spinner>
             </div>
 
-            <div class="loadingList" id="loadingList">
+            <div class="loadingList" id="loadingList" @scroll="doScroll">
                 <mt-loadmore :top-method="loadTop" :bottom-method="loadBottom" :bottom-all-loaded="bottomAllLoaded"
                              :auto-fill="false"
                              :topLoadingText="''" :bottomLoadingText="''" ref="loadmore">
@@ -74,7 +74,8 @@
                     share: '分享',
                     job: '招聘',
                     good: '精华'
-                }
+                },
+                scrollTop: 0
             }
         },
         methods: {
@@ -143,6 +144,9 @@
                     return now.getSeconds() - time.getSeconds() + '秒前';
                 }
                 return 'Now';
+            },
+            doScroll(e){
+                this.scrollTop = document.getElementById('loadingList').scrollTop;
             }
         },
         mounted(){
@@ -159,6 +163,9 @@
         },
         watch: {
             selected: 'changeTab'
+        },
+        activated(){
+            document.getElementById('loadingList').scrollTop = this.scrollTop;
         }
     }
 </script>
@@ -279,7 +286,8 @@
     .flex2 {
         flex: 2;
     }
-    .gotoContent{
+
+    .gotoContent {
         color: #000;
         text-decoration: none;
     }

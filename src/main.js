@@ -7,11 +7,10 @@ import 'mint-ui/lib/style.css';
 import './assets/css/base.css';
 import './assets/css/font-awesome.css'
 
+
 Vue.use(Mint);
 Vue.use(VueRouter);
-const router = new VueRouter({
-    routes:routerConfig.routes
-});
+const router = new VueRouter(routerConfig);
 
 new Vue({
     el: '#app',
