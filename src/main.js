@@ -5,7 +5,8 @@ import Mint from 'mint-ui'
 import routerConfig from './vueRouter.config'
 import 'mint-ui/lib/style.css';
 import './assets/css/base.css';
-import './assets/css/font-awesome.css'
+import './assets/css/font-awesome.css';
+import checkIsLogin from './util/checkAssToken'
 
 
 Vue.use(Mint);
@@ -15,5 +16,8 @@ const router = new VueRouter(routerConfig);
 new Vue({
     el: '#app',
     render: h => h(App),
-    router
+    router,
+    mounted(){
+        checkIsLogin();
+    }
 });

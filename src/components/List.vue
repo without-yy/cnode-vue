@@ -18,7 +18,7 @@
                 <mt-spinner :size="30" type="triple-bounce"></mt-spinner>
             </div>
 
-            <div class="loadingList" id="loadingList" @scroll="doScroll">
+            <div class="loadingList" id="loadingList" @touchend="doScroll">
                 <mt-loadmore :top-method="loadTop" :bottom-method="loadBottom" :bottom-all-loaded="bottomAllLoaded"
                              :auto-fill="false"
                              :topLoadingText="''" :bottomLoadingText="''" ref="loadmore">
