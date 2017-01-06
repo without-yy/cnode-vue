@@ -4,5 +4,8 @@ export default {
     },
     getAssToken(){
         return localStorage.getItem('assToken')||'';
+    },
+    delAssToken(){
+        localStorage.removeItem('assToken');
     }
 }

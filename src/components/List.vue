@@ -153,10 +153,9 @@
 
             let that = this;
             //加载数据
-            this.getContent((data) => {
+            this.getContent(function(data){
                 that.list = data;
                 that.isLoading = false;
-                console.log(data);
             });
             //设置list高度
             document.getElementById('loadingList').style.height = window.innerHeight - 46 - 55 + 'px';

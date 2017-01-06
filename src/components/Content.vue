@@ -115,7 +115,7 @@
         padding: 0 10px;
     }
     .mint-header{
-        background: #369;
+        background: #70ACB1;
         position: fixed;
         width: 100%;
         top: 0;
