@@ -2,9 +2,9 @@
     <div id="content" class="contentBox">
         <!--标题-->
         <mt-header title="详情">
-            <router-link to="/list" slot="left">
+            <a @click="back" slot="left">
                 <mt-button icon="back">返回</mt-button>
-            </router-link>
+            </a>
         </mt-header>
         <!--loading-->
         <div class="loading" v-show="isLoading">
@@ -91,6 +91,9 @@
                     return now.getSeconds() - time.getSeconds() + '秒前';
                 }
                 return 'Now';
+            },
+            back(){
+                history.back();
             }
         },
         mounted(){

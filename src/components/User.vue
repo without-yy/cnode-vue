@@ -17,9 +17,9 @@
                     </div>
                     <ul class="list">
                         <li>
-                            <a class="item">
-                                <i class="icon-mail-reply-all"></i>
-                                <span>发表主题</span>
+                            <a class="item" href="#mytopic">
+                                <i class="icon-bookmark"></i>
+                                <span>我的主题</span>
                             </a>
                         </li>
                         <li>
@@ -28,6 +28,13 @@
                                 <span>我的消息</span>
                             </a>
                         </li>
+                        <li>
+                            <a class="item">
+                                <i class="icon-mail-reply-all"></i>
+                                <span>发表主题</span>
+                            </a>
+                        </li>
+
                         <li>
                             <a href="javascript:;" class="item" @click="loginOut">
                                 <i class="icon-upload-alt"></i>
@@ -63,6 +70,8 @@
                 CheckToken(this.assToken)
                     .then((req) => {
                         AssToken.writeAssToken(that.assToken);
+                        that.userInfo = req.data;
+                        console.log(req.data);
                         that.isLogin = true;
                     })
                     .catch((err) => {
@@ -82,7 +91,6 @@
                 CheckToken().then((req) => {
                     that.userInfo = req.data;
                     that.isLogin = true;
-                    console.log(req.data);
                     that.$refs.loadmore.onTopLoaded();
                 }).catch(() => {
                     that.isLogin = false;
@@ -154,12 +162,14 @@
     /*border-top: 1px solid #f6f6f6;*/
     /*}*/
     .item {
-        padding-left: 15px;
         line-height: 2.5rem;
         border-bottom: 1px solid #fff;
-        background: #f2f2f2;
         display: block;
         text-decoration: none;
+        padding:5px 10px;
+        background: #eee;
+        margin: 10px 5px;
+        border-radius: 5px;
     }
     .item span{
         padding-left: 10px;
