@@ -3,13 +3,11 @@ import User from './components/User.vue'
 import Content from './components/Content.vue'
 import Topic from './components/Topic.vue'
 import Create from './components/Create.vue'
-// const scrollBehavior = (to, from, savedPosition) => {
-//     console.log(to);
-//     console.log(from);
-//     console.log(savedPosition);
-//     return to;
-// };
-export default  {
+
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+Vue.use(VueRouter);
+const router = new VueRouter({
     routes: [
         {path: '/', redirect: '/list'},
         {path: '/list', component: List},
@@ -19,4 +17,6 @@ export default  {
         {path: '/create', component: Create},
         {path: '*', redirect: '/list'}
     ]
-}
+});
+
+export default  router

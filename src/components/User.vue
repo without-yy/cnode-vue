@@ -29,7 +29,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="item">
+                            <a class="item" href="#create">
                                 <i class="icon-mail-reply-all"></i>
                                 <span>发表主题</span>
                             </a>
