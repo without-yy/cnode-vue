@@ -2,6 +2,10 @@
 
 > moblie-cnode
 
+#预览
+<a href="http://cnode.lxxlyy.com:8080/">cnode.lxxlyy.com:8080</a>
+
+
 ## Build Setup
 
 ``` bash
@@ -14,7 +18,13 @@ npm run dev
 # build for production with minification
 npm run build
 ```
-<img src="http://lxweb.oss-cn-shanghai.aliyuncs.com/images/cnode_.png" width="300px"/>
-<img src="http://lxweb.oss-cn-shanghai.aliyuncs.com/images/list_.png" width="300px"/>
+
+<img src="./src/assets/images/cnode.png" width="300px">
+<img src="./src/assets/images/cnodeCreate.png" width="300px">
+<img src="./src/assets/images/cnodeList.png" width="300px">
+<img src="./src/assets/images/cnodeTopic.png" width="300px">
+<img src="./src/assets/images/cnodeUser.png" width="300px">
+<img src="./src/assets/images/cnode.png" width="300px">
+
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
