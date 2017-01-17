@@ -3,7 +3,7 @@
 > moblie-cnode
 
 #预览
-<a href="http://cnode.lxxlyy.com/">cnode.lxxlyy.com:8080</a>
+<a href="http://cnode.lxxlyy.com/">cnode.lxxlyy.com</a>
 
 
 ## Build Setup
